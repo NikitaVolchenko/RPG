@@ -42,4 +42,14 @@ public class Four {
     public void setProtection(int protection) {
         this.protection = protection;
     }
+
+    @Override
+    public String toString() {
+        return "Four{" +
+                "thing='" + thing + '\'' +
+                ", damage=" + damage +
+                ", protection=" + protection +
+                ", availability=" + availability +
+                '}';
+    }
 }

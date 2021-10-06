@@ -26,7 +26,11 @@ public class Acts {
         int number = random.nextInt(diff + 1);
         number += min;
 
-        while(mainCharacter.getHealth() > 0 || monster.getHealth() > 0) {
+        System.out.println("number = " + number);
+
+        while (mainCharacter.getHealth() > 0 || monster.getHealth() > 0) {
+            System.out.println(mainCharacter);
+            System.out.println(monster);
             switch (number) {
                 case 0:                                //ход игрока
                     Motion motion = new Motion();
@@ -39,13 +43,18 @@ public class Acts {
 
                         protection = 0;
                         for (int i = 0; i < 4; i++) {
-                            if(clothes[i].isAvailability()) {
+                            if (clothes[i].isAvailability()) {
                                 protection += clothes[i].getProtection();
                             }
                         }
 
                         monster.characterAttack(abs(monster.getProtection() + protection - damage));
                     }
+
+                    if(mainCharacter.getSkills()[number1].getThing().equals("healing")) {
+                        mainCharacter.setHealth(100);
+                    }
+                    System.out.println("Герой сделал ход");
                 case 1:                                //ход монстра
                     int min1 = 0;
                     int max1 = 3;
@@ -54,25 +63,30 @@ public class Acts {
                     int number2 = random1.nextInt(diff1 + 1);
                     number2 += min1;
 
-                    if(monster.getSkills()[number2].isAvailability()) {
+                    if (monster.getSkills()[number2].isAvailability()) {
                         int damage = monster.getSkills()[number2].getDamage();
                         int protection = monster.getSkills()[number2].getProtection();
                         monster.addProtection(protection);
 
                         protection = 0;
                         for (int i = 0; i < 4; i++) {
-                            if(mainCharacter.getClothes()[i].isAvailability()) {
+                            if (mainCharacter.getClothes()[i].isAvailability()) {
                                 protection += clothes[i].getProtection();
                             }
                         }
 
                         mainCharacter.monsterAttack(abs(mainCharacter.getProtection() + protection - damage));
                     }
-                    if(number == 0) {
-                        number = 1;
-                    } else {
-                        number = 0;
+
+                    if(monster.getSkills()[number2].getThing().equals("healing")) {
+                        monster.setHealth(50);
                     }
+                    System.out.println("Монстр сделал ход");
+            }
+            if (number == 0) {
+                number = 1;
+            } else {
+                number = 0;
             }
         }
     }

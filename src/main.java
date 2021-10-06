@@ -6,5 +6,6 @@ public class main {
 
         MainCharacter mainCharacter = new MainCharacter("Nikita");
         Acts acts = new Acts();
+        acts.startAct1(mainCharacter);
     }
 }
