@@ -28,7 +28,7 @@ public class Acts {
 
         System.out.println("number = " + number);
 
-        while (mainCharacter.getHealth() > 0 || monster.getHealth() > 0) {
+        while (mainCharacter.getHealth() > 0 && monster.getHealth() > 0) {
             System.out.println(mainCharacter);
             System.out.println(monster);
             switch (number) {
@@ -54,7 +54,8 @@ public class Acts {
                     if(mainCharacter.getSkills()[number1].getThing().equals("healing")) {
                         mainCharacter.setHealth(100);
                     }
-                    System.out.println("Герой сделал ход");
+                    System.out.println("Герой сделал ход " + mainCharacter.getSkills()[number1].getThing());
+                    break;
                 case 1:                                //ход монстра
                     int min1 = 0;
                     int max1 = 3;
@@ -62,7 +63,7 @@ public class Acts {
                     Random random1 = new Random();
                     int number2 = random1.nextInt(diff1 + 1);
                     number2 += min1;
-
+                    System.out.println("Монстр ходит, number =  " + number);
                     if (monster.getSkills()[number2].isAvailability()) {
                         int damage = monster.getSkills()[number2].getDamage();
                         int protection = monster.getSkills()[number2].getProtection();
@@ -81,7 +82,10 @@ public class Acts {
                     if(monster.getSkills()[number2].getThing().equals("healing")) {
                         monster.setHealth(50);
                     }
-                    System.out.println("Монстр сделал ход");
+                    System.out.println("Монстр сделал ход " + monster.getSkills()[number2].getThing());
+                    break;
+                default:
+                    break;
             }
             if (number == 0) {
                 number = 1;
