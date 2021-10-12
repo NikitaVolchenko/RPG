@@ -19,7 +19,6 @@ public class Motion {
             }
         }
 
-        //in.close();
         return num;
     }
 }

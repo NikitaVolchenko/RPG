@@ -63,6 +63,10 @@ public class Monster {
         protection = protection + value;
     }
 
+    public void printHealthAndProtection() {
+        System.out.println("Монстр: здоровье = " + health + ", " + "защита = " + protection);
+    }
+
     @Override
     public String toString() {
         return "Monster{" +
@@ -72,5 +76,9 @@ public class Monster {
                 ", health=" + health +
                 ", protection=" + protection +
                 '}';
+    }
+
+    public void addHealth(int value) {
+        health = health + value;
     }
 }
