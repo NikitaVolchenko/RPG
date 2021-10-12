@@ -1,26 +1,18 @@
 import java.util.Arrays;
 
-public class Monster {
+public class Character {
     private String name;
     private Four[] clothes;
     private Four[] skills;
     private int health;
     private int protection;
 
-    public Monster(String name, Four[] clothes, Four[] skills, int health, int protection) {
+    public Character(String name, Four[] clothes, Four[] skills, int health, int protection) {
         this.health = health;
         this.clothes = clothes;
         this.skills = skills;
         this.name = name;
         this.protection = protection;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
     }
 
     public String getName() {
@@ -47,6 +39,14 @@ public class Monster {
         this.skills = skills;
     }
 
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
     public int getProtection() {
         return protection;
     }
@@ -64,12 +64,19 @@ public class Monster {
     }
 
     public void printHealthAndProtection() {
-        System.out.println("Монстр: здоровье = " + health + ", " + "защита = " + protection);
+        System.out.println(name + ": здоровье = " + health + ", " + "защита = " + protection);
+    }
+
+    public void printSkills() {
+        System.out.println("Список ваших умений");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(i + ". " + skills[i].getThing());
+        }
     }
 
     @Override
     public String toString() {
-        return "Monster{" +
+        return "Character{" +
                 "name='" + name + '\'' +
                 ", clothes=" + Arrays.toString(clothes) +
                 ", skills=" + Arrays.toString(skills) +
