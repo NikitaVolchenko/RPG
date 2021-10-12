@@ -147,7 +147,7 @@ public class Acts {
         Four[] skills = new Four[4];
         skills[0] = new Four("hit", 7, 0, true);
         skills[1] = new Four("hard blow", 15, 0, true);
-        skills[2] = new Four("protection", 0, 5, true);
+        skills[2] = new Four("protection", 0, 4, true);
         skills[3] = new Four("healing", 0, 0, true);
 
         Monster monster = new Monster("Monster1", clothes, skills, 70, 0);
@@ -262,7 +262,7 @@ public class Acts {
             mainCharacter.setHealth(100);
             mainCharacter.setProtection(0);
             System.out.println("Монстр повержен! Поздравляю!");
-            System.out.println("Вы выиграли первый акт. Ваша награда " + mainCharacter.getClothes()[x].getThing());
+            System.out.println("Вы выиграли второй акт. Ваша награда " + mainCharacter.getClothes()[x].getThing());
             System.out.println("Это +" + mainCharacter.getClothes()[x].getProtection() + " к вашей защите!");
         }
     }
