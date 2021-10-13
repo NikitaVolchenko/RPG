@@ -14,7 +14,7 @@ public class Acts {
 
         Four[] skills = new Four[4];
         skills[0] = new Four("hit", 5, 0, true);
-        skills[1] = new Four("hard blow", 10, 0, true);
+        skills[1] = new Four("hard blow", 15, 0, true);
         skills[2] = new Four("protection", 0, 2, true);
         skills[3] = new Four("healing", 0, 0, true);
 
@@ -34,8 +34,10 @@ public class Acts {
         }
 
         while (character.getHealth() > 0 && monster.getHealth() > 0) {
+            System.out.println();
             character.printHealthAndProtection();
             monster.printHealthAndProtection();
+            System.out.println();
             switch (number) {
                 case 0:                                //ход игрока
                     character.printSkills();
@@ -129,6 +131,8 @@ public class Acts {
 
             character.setHealth(100);
             character.setProtection(0);
+            character.getSkills()[0].addDamage(5);
+            character.getSkills()[1].addDamage(5);
             System.out.println("Монстр повержен! Поздравляю!");
             System.out.println("Вы выиграли первый акт. Ваша награда " + character.getClothes()[x].getThing());
             System.out.println("Это +" + character.getClothes()[x].getProtection() + " к вашей защите!");
@@ -147,8 +151,8 @@ public class Acts {
         clothes[3] = new Four("chain mail", 0, 10, false);
 
         Four[] skills = new Four[4];
-        skills[0] = new Four("hit", 7, 0, true);
-        skills[1] = new Four("hard blow", 15, 0, true);
+        skills[0] = new Four("hit", 15, 0, true);
+        skills[1] = new Four("hard blow", 25, 0, true);
         skills[2] = new Four("protection", 0, 2, true);
         skills[3] = new Four("healing", 0, 0, true);
 
@@ -168,8 +172,10 @@ public class Acts {
         }
 
         while (character.getHealth() > 0 && monster.getHealth() > 0) {
+            System.out.println();
             character.printHealthAndProtection();
             monster.printHealthAndProtection();
+            System.out.println();
             switch (number) {
                 case 0:                                //ход игрока
                     character.printSkills();
@@ -263,6 +269,8 @@ public class Acts {
 
             character.setHealth(100);
             character.setProtection(0);
+            character.getSkills()[0].addDamage(5);
+            character.getSkills()[1].addDamage(5);
             System.out.println("Монстр повержен! Поздравляю!");
             System.out.println("Вы выиграли второй акт. Ваша награда " + character.getClothes()[x].getThing());
             System.out.println("Это +" + character.getClothes()[x].getProtection() + " к вашей защите!");
@@ -281,8 +289,8 @@ public class Acts {
         clothes[3] = new Four("chain mail", 0, 10, false);
 
         Four[] skills = new Four[4];
-        skills[0] = new Four("hit", 15, 0, true);
-        skills[1] = new Four("hard blow", 25, 0, true);
+        skills[0] = new Four("hit", 35, 0, true);
+        skills[1] = new Four("hard blow", 45, 0, true);
         skills[2] = new Four("protection", 0, 2, true);
         skills[3] = new Four("healing", 0, 0, true);
 
@@ -302,8 +310,10 @@ public class Acts {
         }
 
         while (character.getHealth() > 0 && monster.getHealth() > 0) {
+            System.out.println();
             character.printHealthAndProtection();
             monster.printHealthAndProtection();
+            System.out.println();
             switch (number) {
                 case 0:                                //ход игрока
                     character.printSkills();
@@ -397,6 +407,8 @@ public class Acts {
 
             character.setHealth(100);
             character.setProtection(0);
+            character.getSkills()[0].addDamage(5);
+            character.getSkills()[1].addDamage(5);
             System.out.println("Монстр повержен! Поздравляю!");
             System.out.println("Вы выиграли третий акт. Ваша награда " + character.getClothes()[x].getThing());
             System.out.println("Это +" + character.getClothes()[x].getProtection() + " к вашей защите!");
@@ -415,8 +427,8 @@ public class Acts {
         clothes[3] = new Four("chain mail", 0, 10, false);
 
         Four[] skills = new Four[4];
-        skills[0] = new Four("hit", 20, 0, true);
-        skills[1] = new Four("hard blow", 30, 0, true);
+        skills[0] = new Four("hit", 40, 0, true);
+        skills[1] = new Four("hard blow", 50, 0, true);
         skills[2] = new Four("protection", 0, 2, true);
         skills[3] = new Four("healing", 0, 0, true);
 
@@ -436,8 +448,10 @@ public class Acts {
         }
 
         while (character.getHealth() > 0 && monster.getHealth() > 0) {
+            System.out.println();
             character.printHealthAndProtection();
             monster.printHealthAndProtection();
+            System.out.println();
             switch (number) {
                 case 0:                                //ход игрока
                     character.printSkills();
@@ -531,6 +545,8 @@ public class Acts {
 
             character.setHealth(100);
             character.setProtection(0);
+            character.getSkills()[0].addDamage(5);
+            character.getSkills()[1].addDamage(5);
             System.out.println("Монстр повержен! Поздравляю!");
             System.out.println("Вы выиграли четвертый акт. Ваша награда " + character.getClothes()[x].getThing());
             System.out.println("Это +" + character.getClothes()[x].getProtection() + " к вашей защите!");
@@ -540,7 +556,7 @@ public class Acts {
     }
 
     public int startAct5(Character character) {
-        System.out.println("========== Акт четвертый ==========");
+        System.out.println("========== Акт пятый ==========");
 
         Four[] clothes = new Four[4];
         clothes[0] = new Four("helmet", 0, 5, true);
@@ -549,8 +565,8 @@ public class Acts {
         clothes[3] = new Four("chain mail", 0, 10, true);
 
         Four[] skills = new Four[4];
-        skills[0] = new Four("hit", 30, 0, true);
-        skills[1] = new Four("hard blow", 40, 0, true);
+        skills[0] = new Four("hit", 40, 0, true);
+        skills[1] = new Four("hard blow", 55, 0, true);
         skills[2] = new Four("protection", 0, 2, true);
         skills[3] = new Four("healing", 0, 0, true);
 
@@ -570,8 +586,10 @@ public class Acts {
         }
 
         while (character.getHealth() > 0 && monster.getHealth() > 0) {
+            System.out.println();
             character.printHealthAndProtection();
             monster.printHealthAndProtection();
+            System.out.println();
             switch (number) {
                 case 0:                                //ход игрока
                     character.printSkills();
@@ -645,29 +663,12 @@ public class Acts {
         }
 
         if (character.getHealth() > 0) {
-            int x = 0;
-            boolean flag = true;
-            while (flag) {
-                int min1 = 0;
-                int max1 = 3;
-                int diff1 = max1 - min1;
-                Random random1 = new Random();
-                int number2 = random1.nextInt(diff1 + 1);
-                number2 += min1;
-
-                if (!character.getClothes()[number2].isAvailability()) {
-                    character.getClothes()[number2].setAvailability(true);
-                    //mainCharacter.addProtection(mainCharacter.getClothes()[number2].getProtection());
-                    x = number2;
-                    flag = false;
-                }
-            }
-
             character.setHealth(100);
             character.setProtection(0);
+            character.getSkills()[0].addDamage(5);
+            character.getSkills()[1].addDamage(5);
             System.out.println("Монстр повержен! Поздравляю!");
-            System.out.println("Вы выиграли пятый акт. Ваша награда " + character.getClothes()[x].getThing());
-            System.out.println("Это +" + character.getClothes()[x].getProtection() + " к вашей защите!");
+            System.out.println("Вы выиграли пятый акт.");
             return 0;
         }
         return -1;

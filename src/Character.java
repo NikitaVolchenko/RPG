@@ -60,11 +60,19 @@ public class Character {
     }
 
     public void addProtection(int value) {
-        protection = protection + value;
+        if (protection < 5) {
+            protection = protection + value;
+        }
     }
 
     public void printHealthAndProtection() {
         System.out.println(name + ": здоровье = " + health + ", " + "защита = " + protection);
+        System.out.println("Доступная одежда:");
+        for (Four clothe : clothes) {
+            if (clothe.isAvailability()) {
+                System.out.println(clothe.getThing());
+            }
+        }
     }
 
     public void printSkills() {
@@ -86,6 +94,8 @@ public class Character {
     }
 
     public void addHealth(int value) {
-        health = health + value;
+        if (health < 100) {
+            health = health + value;
+        }
     }
 }

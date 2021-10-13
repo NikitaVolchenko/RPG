@@ -43,6 +43,10 @@ public class Four {
         this.protection = protection;
     }
 
+    public void addDamage(int value) {
+        damage = damage + value;
+    }
+
     @Override
     public String toString() {
         return "Four{" +
