@@ -24,39 +24,21 @@ public class Game {
         System.out.println("Добро пожаловать в игру, " + name + "!");
         Character character = new Character(name, clothes, skills, 100, 0);
 
-        while (true) {
-            Act1 act1 = new Act1();
-            int code = act1.startAct(character);
+        Act[] acts = new Act[5];
+        acts[0] = new Act1();
+        acts[1] = new Act2();
+        acts[2] = new Act3();
+        acts[3] = new Act4();
+        acts[4] = new Act5();
+
+        for (int i = 0; i < 5; i++) {
+            int code = acts[i].startAct(character, i + 1);
             if (code == -1) {
-                System.out.println("Вы проиграли. Игра окончена");
+                System.out.println("Вы погибли.");
                 break;
             }
-            Act2 act2 = new Act2();
-            code = act2.startAct(character);
-            if (code == -1) {
-                System.out.println("Вы проиграли. Игра окончена");
-                break;
-            }
-            Act3 act3 = new Act3();
-            code = act3.startAct(character);
-            if (code == -1) {
-                System.out.println("Вы проиграли. Игра окончена");
-                break;
-            }
-            Act4 act4 = new Act4();
-            code = act4.startAct(character);
-            if (code == -1) {
-                System.out.println("Вы проиграли. Игра окончена");
-                break;
-            }
-            Act5 act5 = new Act5();
-            code = act5.startAct(character);
-            if (code == -1) {
-                System.out.println("Вы проиграли. Игра окончена");
-                break;
-            }
-            System.out.println("Игра окончена!");
-            break;
         }
+
+        System.out.println("Игра окончена!");
     }
 }

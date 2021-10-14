@@ -1,7 +1,6 @@
-public class Act1 {
-    public int startAct(Character character) {
-        System.out.println("========== Акт первый ===========");
-
+public class Act1 extends Act {
+    @Override
+    public Character makeMonster() {
         Four[] clothes = new Four[4];
         clothes[0] = new Four("helmet", 0, 5, false);
         clothes[1] = new Four("shoes", 0, 5, false);
@@ -14,13 +13,6 @@ public class Act1 {
         skills[2] = new Four("protection", 0, 1, true);
         skills[3] = new Four("healing", 0, 0, true);
 
-        Character monster = new Character("Monster1", clothes, skills, 60, 0);
-
-        Battle battle = new Battle();
-        battle.startBattle(character, monster);
-
-        Check check = new Check();
-
-        return check.checkWinner(character, 1);
+        return new Character("Monster1", clothes, skills, 60, 0);
     }
 }
