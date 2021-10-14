@@ -47,6 +47,10 @@ public class Four {
         damage = damage + value;
     }
 
+    public void addProtection(int value) {
+        protection = protection + value;
+    }
+
     @Override
     public String toString() {
         return "Four{" +
